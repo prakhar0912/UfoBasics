@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,KACI,QAAS,CAET,YAAa,CACb,WACJ,CAEA,YALI,iBASJ,CAJA,OAEI,WAAY,CACZ,UACJ","file":"style.6e8a2bfc.css","sourceRoot":"../src","sourcesContent":["body{\n    margin: 0;\n    position: relative;\n    height: 100vh;\n    width: 100vw;\n}\n\n.canva{\n    position: relative;\n    height: 100%;\n    width: 100%;\n}"]}
