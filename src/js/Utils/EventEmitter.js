@@ -1,4 +1,4 @@
-export default class EventEmitter
+class EventEmitter
 {
     /**
      * Constructor
@@ -217,3 +217,5 @@ export default class EventEmitter
         return newName
     }
 }
+
+export default EventEmitter

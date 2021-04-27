@@ -1,4 +1,4 @@
-export default class Time
+class Time
 {
     /**
      * Constructor
@@ -44,3 +44,5 @@ export default class Time
         window.cancelAnimationFrame(this.ticker)
     }
 }
+
+export default Time
