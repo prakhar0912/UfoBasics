@@ -8,7 +8,6 @@ let initThree = () => {
     scene.background = new THREE.Color(0xa0a0a0);
     helper = new CannonHelper(scene)
 
-    let canva = document.querySelector('.canva')
     renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     document.body.appendChild(renderer.domElement)
     
