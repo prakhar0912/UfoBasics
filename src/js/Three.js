@@ -8,15 +8,20 @@ let initThree = () => {
     helper = new CannonHelper(scene)
 
     let canva = document.querySelector('.canva')
-    renderer = new THREE.WebGLRenderer({ alpha: true, canvas: canva });
+    renderer = new THREE.WebGLRenderer({ alpha: true, canvas: canva, antialias: true });
     
-    renderer.setPixelRatio(canva.offsetWidth/canva.offsetHeight);
+    // renderer.setPixelRatio(canva.offsetWidth/canva.offsetHeight);
+    renderer.setPixelRatio(Math.min(Math.max(window.devicePixelRatio, 1.5), 2))
     renderer.setSize(canva.offsetWidth, canva.offsetHeight);
-    renderer.shadowMap.enabled = true;
+    // renderer.shadowMap.enabled = true;
     renderer.physicallyCorrectLights = true
     renderer.gammaFactor = 2.2
     renderer.gammaOutPut = true
     renderer.autoClear = false
+
+    window.addEventListener('resize', () => {
+        renderer.setSize(canva.offsetWidth, canva.offsetHeight)
+    })
 
     const gridHelper = new THREE.GridHelper(10, 10);
     scene.add(gridHelper);
