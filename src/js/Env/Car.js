@@ -200,14 +200,14 @@ let heleHandler = (event) => {
 
 let heleMovement = () => {
     let quat = (ufo.quaternion);
-    let right = new THREE.Vector3(1, 0, 0)
+    let right = new THREE.Vector3(1, 0, 0).applyQuaternion(quat)
     let globalUp = new THREE.Vector3(0, 1, 0);
     let up = new THREE.Vector3(0, 1, 0)
     let forward = new THREE.Vector3(0, 0, 1).applyQuaternion(quat)
 
     let vertDamping = new THREE.Vector3(0, ufo.velocity.y, 0).multiplyScalar(-0.01);
     let vertStab = up.clone();
-    vertStab.multiplyScalar(0.13);
+    vertStab.multiplyScalar(0.10);
     vertStab.add(vertDamping);
     vertStab.multiplyScalar(enginePower);
 

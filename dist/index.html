@@ -5,23 +5,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.c698863b.css">
+    <link rel="stylesheet" href="/style.78032849.css">
     <title>Document</title>
-</head>
+<script src="/style.78032849.js"></script></head>
 
 <body>
-    <script>
-        let eventHandler, time;
+    <!-- <canvas class="canva"></canvas> -->
+    <!-- <script src="./node_modules/cannon/build/cannon.min.js"></script> -->
+    <!-- <script src="./js/three.js"></script> -->
+    <!-- <script type="x-shader/x-vertex" id="vertexshader">
+
+			varying vec2 vUv;
+
+			void main() {
+
+				vUv = uv;
+
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+			}
+
+		</script>
+
+    <script type="x-shader/x-fragment" id="fragmentshader">
+
+			uniform sampler2D baseTexture;
+			uniform sampler2D bloomTexture;
+
+			varying vec2 vUv;
+
+			void main() {
+
+				gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
+
+			}
+
+		</script> -->
+    <!-- <script src='./js/Utils/EventEmitter.js'></script> -->
+    <!-- <script src="./js/Utils/Time.js"></script> -->
+    <!-- <script>
+        let eventHandler = new EventEmitter()
         let assetData = {}
-        let camera, renderer, scene, composer, followCam
+        let camera, renderer, scene, composer
         let world, groundMaterial, dummyMaterial, wheelMaterial, rampMaterial
-        let helper;
-        let ufo, ok;
-        let keyPressed = {}, up, stoptween, forwardflag = true;
-        let enginePower = 3;
-    </script>
-    <script src="/init.3fbf5238.js"></script>
-    <script src="/src.493febc1.js" type="module"></script>
+        let time = new Time();
+        let vehicle, up, maxForce = 30, maxSteerVal = 0.4, brakeForce = 1   
+
+    </script> -->
+    <script>var eventHandler, time;
+var assetData = {};
+var camera, renderer, scene, composer, followCam;
+var world, groundMaterial, dummyMaterial, wheelMaterial, rampMaterial;
+var helper;
+var ufo, ok;
+var keyPressed = {},
+    up,
+    stoptween,
+    forwardflag = true;
+var enginePower = 3;</script>
+    <script src="/init.9d6cb373.js"></script>
+    <script src="/src.e31bb0bc.js" type="module"></script>
 </body>
 
 </html>
